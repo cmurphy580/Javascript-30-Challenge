@@ -1,0 +1,27 @@
+html {
+	background-color: #304D73;
+}
+h2 {
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: 'Cambria';
+}
+/*CSS VARIABLES*/
+:root {
+	--base: #FF5900;
+	--spacing: 10px;
+	--blur: 10px;
+}
+img {
+	padding: var(--spacing); /**/
+	background: var(--base); /**/
+	filter: blur(var(--blur)); /**/
+	width: 25%;
+	height: 25%;
+	border-radius: 25%;
+	margin-top: 25px;
+}
+.hl {
+	color: var(--base); /**/
+}
