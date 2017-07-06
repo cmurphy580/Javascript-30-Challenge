@@ -1,0 +1,109 @@
+html {
+	background-color: #F3F3F3;
+	box-sizing: border-box;
+	font-family: 'Cormorant', serif;
+   	font-size: 14px;
+    text-transform: uppercase;
+}
+body {
+	margin: 0; 
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+.panels {
+	min-height: 50vh;
+	overflow: hidden;
+	display: flex;
+}
+.panel {
+	background: #F3F3F3; /*NAVY*/
+	box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color: #0F0FB0;
+  	opacity: 0.85;
+	transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), /*could be: 'flex-grow'*/
+        background 0.2s;
+    font-size: 14px;
+    background-size: cover;
+    background-position: center;
+    flex: 1; /*each panel will evenly distribute the extra space amongst them*/
+    display: flex;
+    flex-direction: column;
+}
+.panel1 { /*DRUM KIT*/
+	background-image: url('Drum Kit.png');
+}
+.panel2 { /*CLOCK*/
+	background-image: url('JS and CSS Clock.png');
+}
+.panel3 { /*PIE CHART*/
+	background-image: url('Pie Chart.png');
+}
+.panel4 { /*RANDOM QUOTE*/
+	background-image: url('Random Quote Generator.png');
+}
+.panel5 { /*WIKI*/
+	background-image: url('Wikpedia Viewer1.png');
+}
+.panel6 { /*ARROW*//*fix*/
+	background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/315666-200.png');
+	box-shadow: none;
+	opacity: 0.5;
+}
+/*flex items*/
+.panel > * {
+	width: 100%;
+	margin: 0;
+	transition: transform 0.5s;
+	display: flex;
+	flex: 1 0 auto; /**/
+	justify-content: center;
+	align-items: center;
+}
+.panel > *:first-child {
+	transform: translateY(-100%)
+}
+.panel.open-active > *:first-child {
+	transform: translateY(0)
+}
+.panel > *:last-child {
+	transform: translateY(100%)
+}
+.panel.open-active > *:last-child {
+	transform: translateY(0)
+}
+.panel p {
+	text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+.panel p:nth child(2) {
+	font-size: 4em;
+}
+.panel.open {
+	font-size: 20px;
+	flex: 5; /*when has class open element will take fives the space compared to others*/ 
+}
+/**/
+/**/
+/**/
+.thumb-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+.padding {
+  padding: 80px 0 80px 0;
+}
+h4 {
+  color: #0F0FB0;
+  opacity: 0.85;
+  font-size: 24px;
+  text-align: center;
+  padding: 50px 0 30px 0;
+}

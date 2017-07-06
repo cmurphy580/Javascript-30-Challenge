@@ -1,0 +1,38 @@
+New CSS for Flex Panel Gallery
+
+- box-sizing: border-box
+	- if the width and height are the same, but padding, content, or border size differs between the two then 'border-box' will make the two the same size. 'Border-box' does not consider margin.
+
+
+-  *, *:before, *:after {
+      box-sizing: inherit; -- 'inherit' - Inherits this property from its parent element.
+    }
+    - '*'  -- selects all elements and applies styles to them.
+    - '*:before, *:after ' -- allows you to insert something :before and :after the selected elements.
+    					   -- so in this case, all elements before and after the element would inherit box-sizing. 
+    					   -- link: https://stackoverflow.com/questions/32805670/what-does-before-and-after-do-in-css
+
+- whats going on with this transition
+	transition: 
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+
+    -- //applies the transition to the flex, the background and the font
+
+- .panel > * {
+      margin:0;
+      width: 100%;
+      transition:transform 0.5s;
+    }
+
+    - .panel > *  --- apply the following to child elements of the div or element that has the class '.panel' 
+    - >, is called a 'child combinator.'
+    - link: https://stackoverflow.com/questions/3225891/what-does-the-greater-than-sign-css-selector-mean
+
+-  .panel p:nth-child(2) {
+      font-size: 4em;
+    }
+
+    - nth-child(2) -- Specify a font size for every <p> element that is the second child of its parent. The parenting being the div with class, '.panel'.
+    - link : https://www.w3schools.com/cssref/sel_nth-child.asp
