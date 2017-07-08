@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Type Ahead</title>
+        <link rel="stylesheet" href="/Users/CMurphy/Desktop/JavaScript30-Challenge/Type Ahead/Type Ahead.css">
+    </head>
+    <body>
+    	<form class='search-form'>
+    		<input type="text" class="search" placeholder='City or State'>
+			<ul class ='suggestions'>
+			    <li>Filter for a City</li>
+			    <li>or a State</li>
+			</ul>
+    	</form>
+	
+        <script src="/Users/CMurphy/Desktop/JavaScript30-Challenge/Type Ahead/Type Ahead.js"></script>
+    </body>
+</html>
