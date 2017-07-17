@@ -1,0 +1,163 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	min-height: 100vh;
+	background-color: #030B6C;
+	-webkit-box-shadow: inset px 0 100px rgba(0, 0, 0, 0.5);
+  	box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  	border: 5px solid rgba(0, 0, 0, .3);
+  	background-size: cover;
+  	align-items: center;
+  	justify-content: center;
+}
+.player {
+	max-width: 750px; 
+	border: 3px solid rgba(0, 0, 0, .2);
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+	position: relative;
+	font-size: 0;
+	overflow: hidden;
+}
+.fa {
+	color: white;
+}
+.player_button {
+	background: none;
+	border: 0;
+	line-height: 1;
+	color: white;
+	text-align: center;
+	outline: 0;
+	padding: 0;
+	cursor: pointer;
+	max-width: 50px;
+	font-size: 15px;
+}
+.player_button:focus {
+	border-color: #FFC600; /*CHANGE*/
+}
+.player_slider {
+	width: 10px;
+	height: 30px;
+}
+.player_controls {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	transform: translateY(100%) translateX(-5px); /*hide bar until hover over*/
+	transition: all 0.3s;
+	flex-wrap: wrap; /*wrap the overflow to next line*/
+	background: rgba(0, 0, 0, 0.1);
+}
+.player:hover .player_controls {
+	transform: translateY(0);
+}
+.player:hover .progress {
+	height: 8px;
+}
+.player_controls > * {
+	flex: 1;
+}
+.progress {
+	flex: 10; 
+	position: relative;
+	display: flex;
+	flex-basis: 100%; /*length of the item*/
+	height: 5px;
+	transition: height 0.3s;
+	background: rgba(0, 0, 0, 0.5);
+	cursor: ew-resize; /*double arrow (arrow in both directions)*/
+	
+}
+.progress_filled {
+	width: 50%;
+	background: #FFC600; /*CHANGE*/
+	-webkit-box-shadow: inset px 0 15px rgba(0, 0, 0, 0.5);
+  	box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+  	border-left: 3px solid rgba(0, 0, 0, 0.5); /*FIX*/
+  	border-right: 3px solid rgba(0, 0, 0, 0.5); /**/
+	flex: 0;
+	flex-basis: 50%;
+	border-top-right-radius: 5px; /*FIX*/
+	border-bottom-right-radius: 5px; /**/
+}
+/* This css is only applied when fullscreen is active */
+.player:fullscreen {
+	max-width: none;
+	width: 100%;
+}
+.player:-webkit-full-screen { /*CHROME*/
+	max-width: none;
+	width: 100%;
+}
+.player:-moz-full-screen { /*FIREFOX*/
+	max-width: none;
+	width: 100%;
+}
+.player_video {
+	width: 100%;
+	cursor: pointer;
+}
+/**/
+/*css to style input type="range"*/
+input[type=range] {
+	-webkit-appearance: none;
+	background: transparent;
+	width: 100%;
+	margin: 0 5px;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  	background: rgba(255,255,255,0.8);
+  	border-radius: 50px;
+  	border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-webkit-slider-thumb { /*slider = circle on track*/
+  height: 12px;
+  width: 17px;
+  border-radius: 50px;
+  background: #ffc600;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+  box-shadow:0 0 2px rgba(0,0,0,0.2);
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #5D5D5D; /*CHANGED FROM BADA55*/
+}
+input[type=range]::-moz-range-track { /*?*/
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: #ffffff;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-moz-range-thumb { /*?*/
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+  height: 12px;
+  width: 17px;
+  border-radius: 50px;
+  background: #ffc600;
+  cursor: pointer;
+}
+
+
+
