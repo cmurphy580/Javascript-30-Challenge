@@ -1,0 +1,105 @@
+html {
+	background-color: red;
+	box-sizing: border-box;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+}
+*, *:before *:after {
+	box-sizing: inherit;
+}
+.wrapper {
+	padding: 20px;
+	width: 350px;
+	background: rgba(255, 255, 255, 0.95);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+
+}
+h2 {
+	text-align: center;
+	margin: 0;
+	font-weight: 200;
+}
+input[name='item'] {
+	width: 90%;
+	margin-bottom: 10px;
+}
+input[name='reset'] {
+	cursor: pointer;
+}
+input[name='submit'] {
+	cursor: pointer;
+}
+.tasks {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	list-style: none;
+}
+.tasks li {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 10px 0;
+	font-weight: 200;
+	display: flex; 
+}
+.tasks label {
+	flex: 1;
+	cursor: pointer;
+	width: 310px;
+	word-wrap: break-word;
+}
+.tasks input {
+	display: none;
+}/*
+.tasks input + label:before {
+  content: '⬜️'; 
+  margin-right: 10px;
+}
+.tasks input:checked + label:before {
+  content: '🌮'; 
+}
+*/
+.fa-minus-square-o, .fa-check-square {
+	padding-right: 10px;
+	font-size: 10px;
+	margin-top: 4px;
+	cursor: pointer;
+}
+.add_items {
+	margin-top: 20px;
+}
+.add_items input {
+	padding: 10px;
+	outline: 0;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ICON */
+.icon_wrap {
+	/*margin-top: 3%;*/
+	margin-bottom: 50px;
+	padding: 5px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5); 
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+.list_icon {
+	margin-top: 3%;
+	font-size: 95px;
+}
+.check_icon {
+	z-index: 2;
+	font-size: 40px;
+	margin-top: -20%;
+}
+/**/
+/**/
+
+
+
+/**/
