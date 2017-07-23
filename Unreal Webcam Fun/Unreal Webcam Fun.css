@@ -1,0 +1,76 @@
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+	background: brown;
+}
+*, *:before *:after {
+	box-sizing: inherit;
+}
+.photobooth {
+	background: white;
+	max-width: 150rem;
+	margin: 2rem auto;
+	border-radius: 2px;
+}
+.photobooth:after {
+	content: '';
+	display: block;
+	clear: both; /*clearfix*/
+}
+.photo {
+	width: 100%;
+	float: right;
+	display: inline-block;
+}
+.player {
+	z-index: 2;
+	top: 20px; 
+	right: 20px;
+	width: 200px;
+	border: 2px solid orange;
+	display: block;
+}
+.strip {
+	padding: 2rem;
+}
+.strip img {
+	width: 100px;
+	overflow-x: scroll;
+	padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+}
+.btn {
+	z-index: 2;
+	box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.3); 
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	border-radius: 50% !important;
+	font-size: 15px !important;
+	opacity: 0.2;
+}
+.btn:hover {
+	opacity: 0.9;
+}
+button:focus {
+	outline: 0 !important;
+}
+.rgb {
+	z-index: 2;
+	width: 15%; 
+	float: left;
+	background-color: grey;
+	padding: 15px;
+	border-radius: 25px;
+	margin: 10px;
+	opacity: 0.2;
+	cursor: pointer;
+	box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.3); 
+}
+.rgb:hover {
+	opacity: 0.9;
+}
+
+
