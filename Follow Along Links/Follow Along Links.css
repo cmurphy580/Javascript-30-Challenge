@@ -1,0 +1,52 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit; 
+}
+body {
+	min-height: 100vh; 
+	margin: 0;/**/
+	font-family: sans-serif;
+	background-color: orange;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 500px;
+	font-size: 20px;
+	line-height: 2;
+	position: relative;
+}
+a {
+	text-decoration: none;
+	color: black;
+	background: rgba(0,0,0,0.05);
+	border-radius: 20px;
+	padding: 5px;
+	cursor: pointer;
+}
+.highlight {
+	transition: all 0.2s; /*time for the measurements to change when the mouse enters and leaves an anchor tag*/
+	bottom-border: 2px solid white;
+	position: absolute;
+	top: 0;
+	background: white;
+	left: 0;
+	z-index: -1;
+	border-radius: 20px;
+	display: block;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.menu {
+	padding: 15px;
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	margin: 100px 0px;
+}
+.menu a {
+	display: inline-block;
+	padding: 10px;
+	margin: 0 10px;
+	color: black;
+}
