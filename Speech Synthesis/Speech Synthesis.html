@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Speech Synthesis</title>
+        <link rel="stylesheet" href="/Users/CMurphy/Desktop/JavaScript30-Challenge/Speech Synthesis/Speech Synthesis.css">
+    </head>
+    <body>
+        <div class="voiceinator">
+
+        	<h1>The Voiceinator 5000</h1>
+
+        	<select id="voices" name="voice">
+        		<option value="">Select a Voice</option>
+        	</select>
+
+        	<label for="rate">Rate: 
+        		<input type="range" name="rate" min="0" max="3" step="0.1" value="1">
+        	</label>
+
+        	<label for="pitch"> Pitch: 
+        		<input type="range" name="pitch" min="0" max="2" step="0.1" value="">
+        	</label>
+
+        	<textarea name="text">Hello I love Javascript!</textarea> <!--rate, pitch, and text match up with values in the speech synthesis utterance object--> 
+
+        	<button id="stop">Stop!</button>
+        	<button id="speak">Speak</button>
+	
+        </div>
+
+        <script src="/Users/CMurphy/Desktop/JavaScript30-Challenge/Speech Synthesis/Speech Synthesis.js"></script>
+    </body>
+</html>
