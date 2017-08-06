@@ -1,0 +1,70 @@
+html {
+	border-box: box-sizing;
+	font-size: 62.5%;
+	background: blue;
+	background: linear-gradient(45deg, orange 0%, blue 100%); /*define in notes*/
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	text-align: center;
+	font-famiy: 'Inconsolata', monospace;
+}
+.display_time-left {
+	font-weight: 100;
+	font-size: 20rem; /*define in notes*/
+	margin: 0;
+	color: white;
+	text-shadow: 4px 4px 0 rgba(0,0,0,0.05);
+}
+.timer {
+	display: flex; /*define in notes*/
+	min-height: 100vh;
+	flex-direction: column; /*define in notes*/
+}
+.timer_controls {
+	display: flex; /*define in notes*/
+}
+.timer_controls > * {
+	flex: 1; /*define in notes*/
+}
+.timer_controls form {
+	flex: 1;
+	display: flex;
+}
+.timer_controls input {
+	flex: 1;
+	border: 0;
+	padding: 2rem;
+}
+.timer_button {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	color: white;
+	font-size: 2rem;
+	text-transform: uppercase;
+	background: rgba(0,0,0,0.1);
+	border-bottom: 3px solid rgba(0,0,0,0.2);
+	border-right: 1px solid rgba(0,0,0,0.2);
+	padding: 1rem;
+	font-family: 'Inconsolata', monospace;
+}
+.timer_button:hover,
+.timer_button:focus {
+	background: rgba(0,0,0,0.2);
+	outline: 0;
+}
+.display {
+	display: flex;  /*define in notes*/  
+	flex: 1; /*define in notes*/
+	flex-direction: column; /*define in notes*/
+	align-items: center;
+	justify-content: center; 
+}
+.display_end-time {
+	font-size: 4rem;
+	color: white;
+}
